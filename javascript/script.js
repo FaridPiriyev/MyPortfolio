@@ -339,7 +339,7 @@ colorOptions.forEach((option) => {
   });
 });
 
-
+//
 const scrollTopBtn = document.getElementById("scrollTop");
 const progressCircle = document.querySelector(".progress-ring__circle");
 const radius = progressCircle.r.baseVal.value;
