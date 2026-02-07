@@ -1,235 +1,611 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Myportfolio</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<body>
-    <header>
-        <nav>
-            <input type="checkbox" id="menu-toggle" hidden>
-            <label for="menu-toggle" class="bar">
-                <i class="fa-solid fa-bars-staggered" id="open"></i>
-                <i class="fa-solid fa-x" id="close"></i>
+  <body>
+    <div class="settings-icon" id="settingsIcon">
+      <i class="fa-solid fa-gear"></i>
+    </div>
+    <div class="settings-modal" id="settingsModal">
+      <div class="settings-content">
+        <div class="settings-header">
+          <h3>Settings</h3>
+          <button class="close-settings" id="closeSettings">
+            <i class="fa-solid fa-x"></i>
+          </button>
+        </div>
+
+        <div class="settings-body">
+          <div class="setting-item">
+            <div class="setting-label">
+              <i class="fa-solid fa-moon"></i>
+              <span>Theme Mode</span>
+            </div>
+            <label class="theme-switch">
+              <input type="checkbox" id="themeToggle" />
+              <span class="theme-slider"></span>
             </label>
+          </div>
 
-
-            <div class="logo">
-                <div class="icon">
-                    <i class="fa-solid fa-headphones"></i>
-                </div>
-                <a href=""><span>F</span>aridTpv</a>
+          <div class="setting-item">
+            <div class="setting-label">
+              <i class="fa-solid fa-palette"></i>
+              <span>Accent Color</span>
             </div>
-
-            <div class="menu">
-                <ul>
-                    <li><a href="" style="color: var(--maincolor);">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Resume</a></li>
-                    <li><a href="">Portfolio</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
+            <div class="color-picker">
+              <div class="color-option active" data-color="#fec544"></div>
+              <div class="color-option" data-color="#ff6b6b"></div>
+              <div class="color-option" data-color="#4ecdc4"></div>
+              <div class="color-option" data-color="#95e1d3"></div>
+              <div class="color-option" data-color="#f38181"></div>
+              <div class="color-option" data-color="#aa96da"></div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <header>
+      <nav>
+        <input type="checkbox" id="menu-toggle" hidden />
+        <label for="menu-toggle" class="bar">
+          <i class="fa-solid fa-bars-staggered" id="open"></i>
+          <i class="fa-solid fa-x" id="close"></i>
+        </label>
 
-            <div class="telephone">
-                <div class="icon">
-                    <i class="fa-solid fa-phone"></i>
-                </div>
-                <a href="">+994 70 859 12 93</a>
-            </div>
-        </nav>
+        <div class="logo">
+          <div class="icon">
+            <i class="fa-solid fa-headphones"></i>
+          </div>
+          <a href=""><span>F</span>aridTpv</a>
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li><a href="#home" style="color: var(--maincolor)">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="telephone">
+          <div class="icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <a href="tel:+994708591293">+994 70 859 12 93</a>
+        </div>
+      </nav>
     </header>
 
     <section id="home">
-
-
-
-        <div class="container">
-            <div class="home-about">
-                <h3>Hello, I’m</h3>
-                <h2>Piriyev</h2>
-                <h2>Farid</h2>
-                <p>Front-End Developer</p>
-                <button>Hire me</button>
-            </div>
-
-            <div class="home-image">
-                <img src="./img/home-img.jpg" alt="">
-            </div>
-
-            <div class="home-social">
-                <div class="icons">
-                    <div class="icon">
-                        <a href=""><i class="fa-brands fa-github"></i> <span>Github</span></a>
-
-                    </div>
-                    <div class="icon">
-                        <a href=""> <i class="fa-brands fa-instagram"></i> <span>Instagram</span></a>
-
-                    </div>
-
-                    <div class="icon">
-                        <a href=""> <i class="fa-brands fa-linkedin-in"></i> <span>LinkedIn</span></a>
-
-                    </div>
-
-                    <div class="icon">
-                        <a href=""> <i class="fa-brands fa-whatsapp"></i> <span>Whatsapp</span></a>
-
-                    </div>
-
-
-                </div>
-            </div>
+      <div class="container">
+        <div class="home-about">
+          <h3>Hello, I'm</h3>
+          <h2>Piriyev</h2>
+          <h2>Farid</h2>
+          <p>Software Developer</p>
+          <a href="#contact">
+            <button>Hire me</button>
+          </a>
         </div>
 
-        <canvas></canvas>
-    </section>
+        <div class="home-image">
+          <img src="/img/home-img.jpg" alt="Profile" />
+        </div>
 
+        <div class="home-social">
+          <div class="icons">
+            <div class="icon">
+              <a href="https://github.com/FaridPiriyev" target="_blank"
+                ><i class="fa-brands fa-github"></i> <span>Github</span></a
+              >
+            </div>
+            <div class="icon">
+              <a href="https://www.instagram.com/faridtpv.dev/" target="_blank">
+                <i class="fa-brands fa-instagram"></i> <span>Instagram</span></a
+              >
+            </div>
+
+            <div class="icon">
+              <a
+                href="https://www.linkedin.com/in/farid-piriyev-a837ba381/"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+                <span>LinkedIn</span></a
+              >
+            </div>
+
+            <div class="icon">
+              <a href="https://wa.me/994708591293" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> <span>Whatsapp</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <canvas></canvas>
+    </section>
 
     <section id="about">
-        <h4>ABOUT ME</h4>
-        <div class="title"></div>
+      <h4>ABOUT ME</h4>
+      <div class="title"></div>
 
-        <div class="container">
-            <div class="about-img">
-                <img src="./img/about-img.jpg" alt="">
-            </div>
-
-            <div class="about-info">
-                <h2>Hi There! I'm Piriyev Farid</h2>
-                <h3>Front-End Developer</h3>
-                <p>I am a Front-End Developer passionate about crafting intuitive and visually appealing web
-                    experiences. I combine creativity with clean code to design interfaces that attract users, spark
-                    interest, and leave a lasting impression.</p>
-
-                <div class="about-right">
-
-                    <ul>
-                        <li><span>Birthday</span><span>:</span><span>June 10, 2008</span></li>
-                        <li><span>Phone</span><span>:</span><span>+994 70 859 12 93</span></li>
-                        <li><span>Email</span><span>:</span><span>faridpiriyev.developer@gmail.com</span></li>
-                        <li><span>From</span><span>:</span><span>Azerbaijan, Sumgait</span></li>
-                        <li><span>Language</span><span>:</span><span>Azerbaijan, Turkish, English</span></li>
-                        <li><span>Freelance</span><span>:</span><span>Available</span></li>
-                    </ul>
-                </div>
-
-                <button>Download CV</button>
-            </div>
+      <div class="container">
+        <div class="about-img">
+          <img src="/img/about-img.jpg" alt="About" />
         </div>
+
+        <div class="about-info">
+          <h2>Hi There! I'm Piriyev Farid</h2>
+          <h3>Software Developer</h3>
+          <p>
+            I am a Software Developer passionate about crafting intuitive and
+            visually appealing web experiences. I combine creativity with clean
+            code to design interfaces that attract users, spark interest, and
+            leave a lasting impression.
+          </p>
+
+          <div class="about-right">
+            <ul>
+              <li>
+                <span>Birthday</span><span>:</span><span>June 10, 2008</span>
+              </li>
+              <li>
+                <span>Phone</span><span>:</span><span>+994 70 859 12 93</span>
+              </li>
+              <li>
+                <span>Email</span><span>:</span
+                ><span>faridpiriyev.developer@gmail.com</span>
+              </li>
+              <li>
+                <span>From</span><span>:</span><span>Azerbaijan, Sumgait</span>
+              </li>
+              <li>
+                <span>Language</span><span>:</span
+                ><span>Azerbaijan, Turkish, English</span>
+              </li>
+              <li>
+                <span>Freelance</span><span>:</span><span>Available</span>
+              </li>
+            </ul>
+          </div>
+
+          <a
+            href="/img/FaridPiriyev_CV.pdf"
+            download="Farid_Piriyev_CV.pdf"
+            style="text-decoration: none"
+          >
+            <button>Download CV</button>
+          </a>
+        </div>
+      </div>
     </section>
 
+    <section id="services">
+      <h4>SERVICES</h4>
+      <div class="title"></div>
+      <div class="container">
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="s-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Web Development</h3>
+            <p>
+              Building high-performance, modern websites with clean code
+              structures and industry-standard practices.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="s-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>Frontend Development</h3>
+            <p>
+              Creating interactive and fast user interfaces (UI) using React,
+              Vue, or modern Vanilla JavaScript.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="s-icon"><i class="fa-solid fa-gears"></i></div>
+            <h3>API Integration</h3>
+            <p>
+              Seamlessly integrating third-party services and complex data flows
+              into scalable software systems.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="s-icon">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <h3>Responsive Design</h3>
+            <p>
+              Crafting adaptive interfaces that look perfect on every device,
+              from mobile phones to large desktops.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="s-icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <h3>Performance Optimization</h3>
+            <p>
+              Optimizing existing codebases for maximum speed, SEO efficiency,
+              and smooth user experience.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="s-icon"><i class="fa-solid fa-sitemap"></i></div>
+            <h3>Clean Architecture</h3>
+            <p>
+              Designing scalable, readable, and maintainable software
+              architectures for long-term project success.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="skills">
-        <h4>MY SKILLS</h4>
-        <div class="title"></div>
-
-        <div class="container">
-
-            <div class="skills-about">
-                <h2>All the skills that I have in that field of work are mentioned.</h2>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                    dolores.</p>
-                <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor
-                    sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
-            </div>
-
-            <div class="skills-bar">
-
-                <div class="skill-row">
-                    <h3>HTML</h3>
-                    <div class="skills-bar-line">
-                        <div class="progress html"></div>
-                    </div>
-                    <span class="percent">95%</span>
-                </div>
-
-                <div class="skill-row">
-                    <h3>CSS</h3>
-                    <div class="skills-bar-line">
-                        <div class="progress css"></div>
-                    </div>
-                    <span class="percent">85%</span>
-                </div>
-
-                <div class="skill-row">
-                    <h3>Javascript</h3>
-                    <div class="skills-bar-line">
-                        <div class="progress js"></div>
-                    </div>
-                    <span class="percent">70%</span>
-                </div>
-
-                <div class="skill-row">
-                    <h3>BootStrap</h3>
-                    <div class="skills-bar-line">
-                        <div class="progress bootstrap"></div>
-                    </div>
-                    <span class="percent">80%</span>
-                </div>
-
-                <div class="skill-row">
-                    <h3>React</h3>
-                    <div class="skills-bar-line">
-                        <div class="progress react"></div>
-                    </div>
-                    <span class="percent">65%</span>
-                </div>
-
-                <div class="skill-row">
-                    <h3>Next.js</h3>
-                    <div class="skills-bar-line">
-                        <div class="progress next"></div>
-                    </div>
-                    <span class="percent">60%</span>
-                </div>
-
-            </div>
-
+      <h4>SKILLS</h4>
+      <div class="title"></div>
+      <div class="container">
+        <div class="skills-about">
+          <h2>Technical Expertise</h2>
+          <p>
+            I specialize in building modern, scalable, and highly interactive
+            user interfaces. My development process focuses on writing clean,
+            maintainable code and ensuring seamless user experiences across all
+            devices.
+          </p>
+          <p>
+            With a strong foundation in core web technologies and advanced
+            frameworks, I transform complex designs into functional,
+            high-performance digital solutions.
+          </p>
         </div>
+
+        <div class="skills-bar">
+          <div class="skill-row">
+            <h3>HTML5</h3>
+            <div class="skills-bar-line">
+              <div class="progress" data-percent="95%"></div>
+            </div>
+            <div class="percent">95%</div>
+          </div>
+
+          <div class="skill-row">
+            <h3>CSS3</h3>
+            <div class="skills-bar-line">
+              <div class="progress" data-percent="90%"></div>
+            </div>
+            <div class="percent">90%</div>
+          </div>
+
+          <div class="skill-row">
+            <h3>JavaScript</h3>
+            <div class="skills-bar-line">
+              <div class="progress" data-percent="85%"></div>
+            </div>
+            <div class="percent">85%</div>
+          </div>
+
+          <div class="skill-row">
+            <h3>Bootstrap</h3>
+            <div class="skills-bar-line">
+              <div class="progress" data-percent="75%"></div>
+            </div>
+            <div class="percent">75%</div>
+          </div>
+
+          <div class="skill-row">
+            <h3>Tailwind</h3>
+            <div class="skills-bar-line">
+              <div class="progress" data-percent="70%"></div>
+            </div>
+            <div class="percent">70%</div>
+          </div>
+
+          <div class="skill-row">
+            <h3>React</h3>
+            <div class="skills-bar-line">
+              <div class="progress" data-percent="74%"></div>
+            </div>
+            <div class="percent">74%</div>
+          </div>
+
+          <div class="skill-row">
+            <h3>Next.js</h3>
+            <div class="skills-bar-line">
+              <div class="progress" data-percent="76%"></div>
+            </div>
+            <div class="percent">76%</div>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <section id="portfolio">
+      <h4>Portfolios</h4>
+      <div class="title"></div>
+      <div class="container">
+        <div class="portfolio-grid">
+          <div class="card">
+            <a
+              href="https://youtu.be/X5A0THfYNdA"
+              target="_blank"
+              class="card-link"
+            >
+              <div class="card-image">
+                <img src="/img/vitazen.png" alt="Vitazen" />
+                <div class="image-overlay">
+                  <div class="play-icon"></div>
+                </div>
+              </div>
+            </a>
 
-    <!-- <section id="portfolio">
-        <h4>PORTFOLIOS</h4>
-        <div class="title"></div>
-
-
-        <div class="container">
-            <div class="card">
-
+            <div class="card-content">
+              <h3 class="card-title">Vitazen</h3>
+              <p class="card-description">
+                Built a full e-commerce website (VITAZEN) using Next.js and
+                Tailwind CSS, featuring product categories, shopping cart,
+                wishlist, responsive UI/UX, and essential store pages (About,
+                FAQ, Contact, Blog). The project emphasizes modern frontend
+                architecture, performance optimization, and is deployed on
+                Vercel for high availability.
+              </p>
+              <a href="https://vitazen-ecommerce.vercel.app/" target="_blank"
+                >Project's link</a
+              >
             </div>
-            <div class="card">
+          </div>
 
-            </div>
-            <div class="card">
+          <div class="card">
+            <a
+              href="https://youtu.be/bLrL4G_aGAc"
+              target="_blank"
+              class="card-link"
+            >
+              <div class="card-image">
+                <img src="/img/WAY.png" alt="WAY" />
+                <div class="image-overlay">
+                  <div class="play-icon"></div>
+                </div>
+              </div>
+            </a>
 
+            <div class="card-content">
+              <h3 class="card-title">World Aze Youth</h3>
+              <p class="card-description">
+                Led the design and full-stack development of the official
+                website for the World Azerbaijanis Youth Organization
+                (www.worldazeyouth.az ). Built a responsive and modern platform
+                optimized for accessibility and performance, ensuring a seamless
+                user experience and strong online representation for the
+                organization
+              </p>
+              <a href="https://www.worldazeyouth.az/" target="_blank"
+                >Project's link</a
+              >
             </div>
+          </div>
+
+          <div class="card">
+            <a
+              href="https://youtu.be/sP_nRf3oWHo"
+              target="_blank"
+              class="card-link"
+            >
+              <div class="card-image">
+                <img src="/img/informatic.png" alt="Informatic" />
+                <div class="image-overlay">
+                  <div class="play-icon"></div>
+                </div>
+              </div>
+            </a>
+            <div class="card-content">
+              <h3 class="card-title">Informatic</h3>
+              <p class="card-description">
+                I just wrapped up the demo version of Informatic, a clean and
+                modern educational platform built entirely with HTML, CSS, and
+                pure JavaScript. My goal was to create a responsive and
+                intuitive interface that prioritizes content delivery and
+                performance. Deployed on Vercel, it's a testament to what can be
+                achieved with a solid grasp of web fundamentals.
+              </p>
+              <a href="https://informatic-eight.vercel.app/" target="_blank"
+                >Project's link</a
+              >
+            </div>
+          </div>
         </div>
-    </section> -->
+      </div>
+    </section>
 
+    <section id="reviews">
+      <h4>REVIEWS</h4>
+      <div class="title"></div>
+      <div class="container">
+        <div class="reviews-grid">
+          <div class="review-item">
+            <div class="review-box">
+              <p>
+                "Lorem ipsum dolor sittem ametamngcing elit, per sed do eiusmoad
+                teimpor sittem elit inuning utsed sittem do eiusmod."
+              </p>
+              <div class="arrow-down"></div>
+            </div>
+            <div class="review-user">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150"
+                alt="Richard"
+              />
+              <h5>Richard Miles</h5>
+              <span>Chairman</span>
+            </div>
+          </div>
+          <div class="review-item">
+            <div class="review-box">
+              <p>
+                "Lorem ipsum dolor sittem ametamngcing elit, per sed do eiusmoad
+                teimpor sittem elit inuning utsed sittem do eiusmod."
+              </p>
+              <div class="arrow-down"></div>
+            </div>
+            <div class="review-user">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150"
+                alt="Vesta"
+              />
+              <h5>Vesta Shufelt</h5>
+              <span>Executive Director</span>
+            </div>
+          </div>
+          <div class="review-item">
+            <div class="review-box">
+              <p>
+                "Lorem ipsum dolor sittem ametamngcing elit, per sed do eiusmoad
+                teimpor sittem elit inuning utsed sittem do eiusmod."
+              </p>
+              <div class="arrow-down"></div>
+            </div>
+            <div class="review-user">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150"
+                alt="Joseph"
+              />
+              <h5>Joseph Alves</h5>
+              <span>Managing Director</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="contact">
+      <div class="contact-header">
+        <h4>CONTACT ME</h4>
+      </div>
 
+      <div class="title"></div>
+
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-form">
+            <h3>Just say Hello</h3>
+            <form action="https://formspree.io/f/xkovnrrg" method="POST">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <input type="text" name="subject" placeholder="Your Subject" />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                rows="5"
+                required
+              ></textarea>
+              <button type="submit" class="send-btn">Send Message</button>
+            </form>
+          </div>
+
+          <div class="contact-info">
+            <h3>Contact Info</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              ligula nulla tincidunt id faucibus sed suscipit feugiat.
+            </p>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="info-text">
+                <h5>Email</h5>
+                <span>faridpiriyev.developer@gmail.com</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="info-text">
+                <h5>Phone</h5>
+                <span>+994 70 859 12 93</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="info-text">
+                <h5>Address</h5>
+                <span>Azerbaijan, Sumgait</span>
+              </div>
+            </div>
+
+            <div class="social-connect">
+              <h5>Visite my social profile and get connected</h5>
+              <div class="social-icons">
+                <a href="#" class="social-link"
+                  ><i class="fa-brands fa-github"></i
+                  ><span class="social-name">GitHub</span></a
+                >
+                <a href="#" class="social-link"
+                  ><i class="fa-brands fa-instagram"></i
+                  ><span class="social-name">Instagram</span></a
+                >
+                <a href="#" class="social-link"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                  ><span class="social-name">LinkedIn</span></a
+                >
+                <a href="#" class="social-link"
+                  ><i class="fa-brands fa-whatsapp"></i
+                  ><span class="social-name">WhatsApp</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
-        <h2>© 2025. Designed by Farid Piriyev. All right reserved.</h2>
+      <h2>© 2025. Designed by Farid Piriyev. All right reserved.</h2>
     </footer>
 
+    <div id="scrollTop" class="scroll-top">
+      <i class="fa-solid fa-arrow-up"></i>
+      <svg class="progress-ring" width="50" height="50">
+        <circle
+          class="progress-ring__circle"
+          stroke="var(--maincolor)"
+          stroke-width="3"
+          fill="transparent"
+          r="22"
+          cx="25"
+          cy="25"
+        />
+      </svg>
+    </div>
 
-    <script src="./javascript/script.js"></script>
-</body>
-
+    <script src="javascript/script.js"></script>
+  </body>
 </html>
